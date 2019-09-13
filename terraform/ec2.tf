@@ -47,7 +47,7 @@ resource "aws_instance" "employees-terraform" {
     "sudo systemctl enable gunicorn;",
     "sudo systemctl restart gunicorn;",
     "sudo cp employees/terraform/employee_nginx /etc/nginx/sites-available/;",
-    "sudo ln -s /etc/nginx/sites-available/dixiapp_nginx /etc/nginx/sites-enabled;",
+    "sudo ln -s /etc/nginx/sites-available/employee_nginx /etc/nginx/sites-enabled;",
     "sudo systemctl restart nginx;",
     "sudo ufw allow 'Nginx Full';",
     "sudo systemctl daemon-reload",
