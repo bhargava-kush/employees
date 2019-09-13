@@ -1,0 +1,14 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+
+WorkingDirectory=/home/ubuntu/employees
+EnvironmentFile=/home/ubuntu/employees/.envs/.django
+ExecStart=/home/ubuntu/employee/bin/gunicorn --access-logfile - --workers 4 --timeout 80 --bind unix:/home/ubuntu/employees/profileapi_django.sock config.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
