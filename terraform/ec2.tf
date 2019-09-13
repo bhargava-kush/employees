@@ -25,7 +25,7 @@ resource "aws_instance" "employees-terraform" {
     "sudo apt-get -y update;",
     "sudo apt-get -y install python3-pip libpq-dev nginx git postgresql postgresql-contrib software-properties-common;",
     "sudo -H pip3 install virtualenv;",
-    "git clone https://${var.git_username}:${var.git_password}@github.com/harpsha/dixiapp.git;",
+    "git clone https://github.com/bhargava-kush/employees.git;",
 //    "git clone git@github.com:harpsha/dixiapp.git",
     "export POSTGRES_HOST=${element(split(":", aws_db_instance.employee_app.endpoint), 0)}",
     "export DJANGO_SETTINGS_MODULE=employees.prod_settings",
@@ -87,7 +87,7 @@ resource "aws_key_pair" "auth" {
 
 
 resource "aws_security_group" "sgroup_22_80" {
-  name = "sgroup_21"
+  name = "sgroup_22"
   ingress {
       from_port   = 22
       to_port     = 22

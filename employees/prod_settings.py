@@ -11,4 +11,3 @@ DATABASES = {
     }
 }
 
-POSTGRES_HOST=
