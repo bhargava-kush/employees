@@ -9,6 +9,6 @@ server {
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:/home/sammy/myproject/myproject.sock;
+        proxy_pass http://unix:/home/ubuntu/employees/employee_app.sock;
     }
 }
