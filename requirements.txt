@@ -1,0 +1,17 @@
+django-filter==2.0.0
+django==2.0.10
+djangorestframework==3.9.0
+psycopg2==2.7.4
+python-dateutil==2.6.0
+pytz==2017.2
+PyYAML==3.12
+requests==2.9.1
+semantic-version==2.5.0
+six==1.10.0
+tabulate==0.7.5
+termcolor==1.1.0
+wcwidth==0.1.7
+websocket-client==0.44.0
+django-autofixture==0.12.1
+django-environ==0.4.5
+gunicorn==19.9.0
